@@ -1,26 +1,32 @@
-var createArr=JSON.parse(localStorage.getItem("createItem"));
+var createArr=JSON.parse(localStorage.getItem("createItem"))||[];
      var c=0;
      document.querySelector("form").addEventListener("submit",getIn);
-    function getIn(event){
+
+    function getIn(e){
         
-        event.preventDefault();
+         e.preventDefault();
         var email=document.querySelector("#emil").value;
         var pwd=document.querySelector("#password").value;
+
         
-        for(i=0;i<createArr.length;i++)
-        { var c=0;
-            if(createArr[i].email==email && createArr[i].pass==pwd)
-            {
-                c=1;
-                break;
+        
+            console.log(createArr[0].email,email,createArr[0].pass,pwd)
+            for(i=0;i<createArr.length;i++)
+            { 
+                if(createArr[i].email==email && createArr[i].pass==pwd)
+                {
+                    c=1;
+                    break;
+                }
             }
-        }
+        
+        
         if(c==1){
             alert("Login Successfully");
             window.location.href="index.html";
         }
         else{
-            alert("Email or Password is incorrect");
+            alert("Email or Password is incorrect or You are a new user");
         }
     }
 

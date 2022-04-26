@@ -1,4 +1,4 @@
-createArr=JSON.parse(localStorage.getItem("createItem"));
+createArr=JSON.parse(localStorage.getItem("createItem"))||[];
 document.querySelector("#first").value=""
 document.querySelector("#last").value=""
 document.querySelector("#email").value=""
@@ -37,6 +37,6 @@ alert("Please create password depending on the length");
     createArr.push(createObj);
     localStorage.setItem("createItem",JSON.stringify(createArr));
     alert("ThankYou for Creating Account in Sephora");
-    window.location.href="signin.html";
+    window.location.href="./index.html";
 }
 }
