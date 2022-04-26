@@ -30,6 +30,14 @@ body {
         {
           margin-left: 20px;
         } */
+
+
+        /* .nav{
+          display: flex;
+          width: 100vw;
+          background-color: white;
+          
+        } */
 */ div img {
   padding-left: 10%;
   width: 80%;
@@ -51,8 +59,8 @@ button {
   font-family: "Gill Sans", sans-serif;
 }
 .top1 {
-  width: 90%;
-  margin: auto;
+  width: 100vw;
+  /* margin: auto; */
   display: flex;
   height: 100px;
   justify-content: space-around;
@@ -307,7 +315,7 @@ p {
   padding-bottom: 20px;
 }
 #more {
-  width: 80%;
+  width: 90%;
   height: 220px;
   margin: auto;
   display: flex;
